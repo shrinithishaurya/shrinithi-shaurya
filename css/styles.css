@@ -34,8 +34,8 @@ body{background:radial-gradient(130% 120% at 50% 130%,#16205e 0%,#0a1030 26%,#05
   background:var(--indigo-soft);box-shadow:0 0 8px rgba(139,149,255,.8)}
 .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:8px;color:#fff;font-size:16px;
   line-height:1;padding:8px 11px;cursor:pointer;font-family:var(--mono)}
-.mobile-menu{position:fixed;inset:0 0 auto 0;z-index:39;transform:translateY(-105%);transition:transform .35s cubic-bezier(.2,.7,.2,1);
-  background:rgba(6,8,18,.97);backdrop-filter:blur(10px);padding:84px clamp(18px,6vw,48px) 30px;border-bottom:1px solid var(--line);
+.mobile-menu{position:fixed;inset:0 0 auto 0;z-index:39;max-height:100dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;transform:translateY(-105%);transition:transform .35s cubic-bezier(.2,.7,.2,1);
+  background:rgba(6,8,18,.97);backdrop-filter:blur(10px);padding:84px clamp(18px,6vw,48px) calc(30px + env(safe-area-inset-bottom));border-bottom:1px solid var(--line);
   display:flex;flex-direction:column;gap:4px}
 .mobile-menu.open{transform:translateY(0)}
 .mobile-menu a{font-family:var(--serif);font-size:1.6rem;color:#e9ebf6;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--line);cursor:pointer}
